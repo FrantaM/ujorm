@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Tests for the class MessageService

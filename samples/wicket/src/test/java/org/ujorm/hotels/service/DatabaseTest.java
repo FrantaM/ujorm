@@ -23,7 +23,7 @@ import java.util.List;
 import javax.inject.Inject;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.test.context.ContextConfiguration;
@@ -41,7 +41,7 @@ import org.ujorm.orm.OrmUjo;
 import org.ujorm.orm.Query;
 import org.ujorm.orm.template.AliasTable;
 import org.ujorm.spring.CommonDao;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.ujorm.orm.template.AliasTable.Build.*;
 
 /**

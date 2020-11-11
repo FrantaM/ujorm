@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import org.ujorm.WeakKey;
 import org.ujorm.core.KeyFactory;
 import org.ujorm.core.WeakKeyFactory;
@@ -33,7 +33,7 @@ import static java.math.BigDecimal.*;
  *
  * @author ponec
  */
-public class WeakKeyTest extends TestCase {
+public class WeakKeyTest {
     
     private static final WeakKeyFactory f = KeyFactory.WeakBuilder.get(WeakKeyTest.class);
     

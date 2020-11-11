@@ -17,11 +17,11 @@
 package org.ujorm.tools.xml.model;
 
 import org.ujorm.tools.xml.model.XmlModel;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.ujorm.tools.msg.MsgFormatter;
 import org.ujorm.tools.xml.AbstractWriter;
 import org.ujorm.tools.xml.Html;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.ujorm.tools.xml.AbstractWriter.*;
 
 /**

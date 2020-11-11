@@ -17,7 +17,7 @@ package samples.values;
 
 import java.util.ArrayList;
 import java.util.List;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import org.ujorm.CompositeKey;
 import org.ujorm.Key;
 
@@ -25,7 +25,7 @@ import org.ujorm.Key;
  * Test of the CompositeKey iterator:
  * @author Pavel Ponec
  */
-public class CompositeKeyTest extends TestCase {
+public class CompositeKeyTest {
 
     public void testCompositeKey2f() {
         CompositeKey<Person,String> ck = Person.FATHERS_NAME;

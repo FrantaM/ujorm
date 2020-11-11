@@ -15,14 +15,14 @@
  */
 package org.ujorm.extensions;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import org.ujorm.implementation.universe.UniUjoBase;
 
 /**
  * KeyPairsTest
  * @author Pavel Ponec
  */
-public class KeyPairsTest extends TestCase {
+public class KeyPairsTest {
 
     public KeyPairsTest(String testName) {
         super(testName);

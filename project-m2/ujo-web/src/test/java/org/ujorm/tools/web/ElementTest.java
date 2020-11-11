@@ -21,7 +21,7 @@ import java.util.LinkedHashMap;
 import org.junit.*;
 import org.ujorm.tools.xml.config.impl.DefaultHtmlConfig;
 import org.ujorm.tools.xml.config.HtmlConfig;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Pavel Ponec

@@ -17,13 +17,13 @@ package org.ujorm.core;
 
 import java.util.ArrayList;
 import java.util.List;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
 /**
  *
  * @author Pavel Ponec
  */
-public class UjoToolsTest extends TestCase {
+public class UjoToolsTest {
 
     public UjoToolsTest(String testName) {
         super(testName);

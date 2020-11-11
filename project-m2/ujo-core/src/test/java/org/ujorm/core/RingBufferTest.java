@@ -17,13 +17,13 @@ package org.ujorm.core;
 
 import java.io.IOException;
 import java.io.Reader;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
 /**
  * RingBuffer test
  * @author Pavel Ponec
  */
-public class RingBufferTest extends TestCase {
+public class RingBufferTest {
 
     public RingBufferTest(String testName) {
         super(testName);

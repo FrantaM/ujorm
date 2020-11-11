@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Pavel Ponec
  */
-public class $PatternTest extends TestCase {
+public class $PatternTest {
     
     public $PatternTest(String testName) {
         super(testName);

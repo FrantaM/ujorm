@@ -18,10 +18,8 @@ package org.ujorm.tools;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Testing the method Assert
@@ -49,7 +47,7 @@ public class AssertTest {
 
         Assert.isFalse(false);
         Assert.isFalse(30, (x) -> x < 20);
-        Assert.isNull (null);
+        Assert.isNull(null);
         Assert.isEmpty("");
         Assert.isEmpty(new char[0]);
         Assert.isEmpty(new StringBuilder());
@@ -438,291 +436,351 @@ public class AssertTest {
     /**
      * Test of isTrue method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsTrue_boolean_nok() {
         System.out.println("isTrue");
-        boolean value = false;
-        Assert.isTrue(value);
+        assertThrows(IllegalArgumentException.class, () -> {
+            boolean value = false;
+            Assert.isTrue(value);
+        });
     }
 
     /**
      * Test of isTrue method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsTrue_boolean_ObjectArr_nok() {
         System.out.println("isTrue");
-        boolean value = false;
-        Assert.isTrue(value, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            boolean value = false;
+            Assert.isTrue(value, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isTrue method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsTrue_Predicate_nok() {
         System.out.println("isTrue");
-        Assert.isTrueRequired(30, (x) -> x < 20, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Assert.isTrueRequired(30, (x) -> x < 20, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of notNull method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testNotNull_Object_nok() {
         System.out.println("notNull");
-        Object value = null;
-        Assert.notNull(value);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object value = null;
+            Assert.notNull(value);
+        });
     }
 
     /**
      * Test of notNull method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testNotNull_Object_ObjectArr_nok() {
         System.out.println("notNull");
-        Object value = null;
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object value = null;
 
-        Assert.notNull(value, TEST_MESSAGE);
+            Assert.notNull(value, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_byteArr_nok() {
         System.out.println("hasLength");
-        byte[] array = new byte[0];
-        Assert.hasLength(array);
+        assertThrows(IllegalArgumentException.class, () -> {
+            byte[] array = new byte[0];
+            Assert.hasLength(array);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_byteArr_ObjectArr_nok() {
         System.out.println("hasLength");
-        byte[] array = new byte[0];
-        Assert.hasLength(array, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            byte[] array = new byte[0];
+            Assert.hasLength(array, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_charArr_nok() {
         System.out.println("hasLength");
-        char[] array = new char[0];
-        Assert.hasLength(array);
+        assertThrows(IllegalArgumentException.class, () -> {
+            char[] array = new char[0];
+            Assert.hasLength(array);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_charArr_ObjectArr_nok() {
         System.out.println("hasLength");
-        char[] array = new char[0];
-        Assert.hasLength(array, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            char[] array = new char[0];
+            Assert.hasLength(array, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_ObjectArr_nok() {
         System.out.println("hasLength");
-        Object[] values = null;
-        Assert.hasLength(values);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object[] values = null;
+            Assert.hasLength(values);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_ObjectArr_ObjectArr_nok() {
         System.out.println("hasLength");
-        Object[] values = null;
-        Assert.hasLength(values, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object[] values = null;
+            Assert.hasLength(values, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_Collection_nok() {
         System.out.println("hasLength");
-        Collection values = null;
-        Assert.hasLength(values);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Collection values = null;
+            Assert.hasLength(values);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_Collection_ObjectArr_nok() {
         System.out.println("hasLength");
-        Collection values = null;
-        Assert.hasLength(values, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Collection values = null;
+            Assert.hasLength(values, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_CharSequence_nok() {
         System.out.println("hasLength");
-        CharSequence value = null;
-        Assert.hasLength(value);
+        assertThrows(IllegalArgumentException.class, () -> {
+            CharSequence value = null;
+            Assert.hasLength(value);
+        });
     }
 
     /**
      * Test of hasLength method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testHasLength_CharSequence_ObjectArr_nok() {
         System.out.println("hasLength");
-        CharSequence value = null;
-        Assert.hasLength(value, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            CharSequence value = null;
+            Assert.hasLength(value, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isFalse method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsFalse_boolean_nok() {
         System.out.println("isFalse");
-        boolean value = true;
-        Assert.isFalse(value);
+        assertThrows(IllegalArgumentException.class, () -> {
+            boolean value = true;
+            Assert.isFalse(value);
+        });
     }
 
     /**
      * Test of isFalse method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsFalse_boolean_ObjectArr_nok() {
         System.out.println("isFalse");
-        boolean value = true;
-        Assert.isFalse(value, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            boolean value = true;
+            Assert.isFalse(value, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isNull method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsNull_Object_nok() {
         System.out.println("isNull");
-        Object value = "";
-        Assert.isNull(value);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object value = "";
+            Assert.isNull(value);
+        });
     }
 
     /**
      * Test of isNull method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsNull_Object_ObjectArr_nok() {
         System.out.println("isNull");
-        Object value = "";
-        Assert.isNull(value, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object value = "";
+            Assert.isNull(value, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_byteArr_nok() {
         System.out.println("isEmpty");
-        byte[] array = new byte[1];
-        Assert.isEmpty(array);
+        assertThrows(IllegalArgumentException.class, () -> {
+            byte[] array = new byte[1];
+            Assert.isEmpty(array);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_byteArr_ObjectArr_nok() {
         System.out.println("isEmpty");
-        byte[] array = new byte[1];
-        Assert.isEmpty(array, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            byte[] array = new byte[1];
+            Assert.isEmpty(array, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_charArr_nok() {
         System.out.println("isEmpty");
-        char[] array = new char[1];
-        Assert.isEmpty(array);
+        assertThrows(IllegalArgumentException.class, () -> {
+            char[] array = new char[1];
+            Assert.isEmpty(array);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_charArr_ObjectArr_nok() {
         System.out.println("isEmpty");
-        char[] array = new char[1];
-        Assert.isEmpty(array, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            char[] array = new char[1];
+            Assert.isEmpty(array, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_ObjectArr_nok() {
         System.out.println("isEmpty");
-        Object[] values = {"A"};
-        Assert.isEmpty(values);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object[] values = {"A"};
+            Assert.isEmpty(values);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_ObjectArr_ObjectArr_nok() {
         System.out.println("isEmpty");
-        Object[] values = {"A"};
-        Assert.isEmpty(values, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Object[] values = {"A"};
+            Assert.isEmpty(values, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_Collection_nok() {
         System.out.println("isEmpty");
-        Collection values = Arrays.asList("A", "B", "C");
-        Assert.isEmpty(values);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Collection values = Arrays.asList("A", "B", "C");
+            Assert.isEmpty(values);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_Collection_ObjectArr_nok() {
         System.out.println("isEmpty");
-        Collection values = Arrays.asList("A", "B", "C");
-        Assert.isEmpty(values, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Collection values = Arrays.asList("A", "B", "C");
+            Assert.isEmpty(values, TEST_MESSAGE);
+        });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_CharSequence_nok() {
         System.out.println("isEmpty");
-        CharSequence value = "ABC";
-        Assert.isEmpty(value);
+        assertThrows(IllegalArgumentException.class,
+                 () -> {
+                    CharSequence value = "ABC";
+                    Assert.isEmpty(value);
+                });
     }
 
     /**
      * Test of isEmpty method, of class Assert.
      */
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testIsEmpty_CharSequence_ObjectArr_nok() {
         System.out.println("isEmpty");
-        CharSequence value = "ABC";
-        Assert.isEmpty(value, TEST_MESSAGE);
+        assertThrows(IllegalArgumentException.class,
+                 () -> {
+                    CharSequence value = "ABC";
+                    Assert.isEmpty(value, TEST_MESSAGE);
+                });
     }
 
 }

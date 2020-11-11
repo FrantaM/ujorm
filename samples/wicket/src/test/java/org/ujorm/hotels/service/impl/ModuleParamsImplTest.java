@@ -19,7 +19,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ import org.ujorm.hotels.entity.Customer;
 import org.ujorm.hotels.service.AuthService;
 import org.ujorm.hotels.service.ParamService;
 import org.ujorm.hotels.service.param.ApplicationParams;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * ModuleParamsImplTest

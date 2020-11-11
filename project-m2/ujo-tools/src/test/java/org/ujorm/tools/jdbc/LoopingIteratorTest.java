@@ -8,11 +8,11 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.ujorm.tools.jdbc.mock.AbstractPreparedStatement;
 import org.ujorm.tools.jdbc.mock.AbstractResultSet;
 import org.ujorm.tools.set.LoopingIterator;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *

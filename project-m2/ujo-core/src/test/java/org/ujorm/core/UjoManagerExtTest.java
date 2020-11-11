@@ -13,7 +13,7 @@ import junit.framework.*;
  *
  * @author Pavel Ponec
  */
-public class UjoManagerExtTest extends TestCase {
+public class UjoManagerExtTest {
     
     public UjoManagerExtTest(String testName) {
         super(testName);

@@ -15,7 +15,7 @@
  */
 package samples.values;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import org.ujorm.Key;
 import static samples.values.Person.*;
 
@@ -23,7 +23,7 @@ import static samples.values.Person.*;
  * Sample of usage
  * @author Pavel Ponec
  */
-public class UsageTest extends TestCase {
+public class UsageTest {
 
     public void testSetGet() {
         Person person = new Person();

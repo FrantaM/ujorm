@@ -9,18 +9,13 @@ package org.ujorm;
 
 import java.util.Arrays;
 import java.util.List;
-import junit.framework.*;
 import org.ujorm.extensions.UjoTextable;
 
 /**
  *
  * @author Pavel Ponec
  */
-abstract public class MyTestCase extends TestCase {
-
-    public MyTestCase(String testName) {
-        super(testName);
-    }
+abstract public class MyTestCase {
 
     /** A TimeTest loop size. */
     public int getTimeLoopCount() {
@@ -55,7 +50,7 @@ abstract public class MyTestCase extends TestCase {
                 Key key = keys.get(i);
                 String o1 = String.valueOf(((UjoTextable)expected).readValueString(key, null));
                 String o2 = String.valueOf(((UjoTextable)actual  ).readValueString(key, null));
-                assertEquals("Property \"" + key.getName() + "\"", o1, o2);
+                assertEquals(o1, o2, "Property \"" + key.getName() + "\"");
             }
         }
 
@@ -67,13 +62,13 @@ abstract public class MyTestCase extends TestCase {
 
             String item = "Property \"" + key.getName() + "\"";
             if (byte[].class.equals(key.getType())) {
-                assertEquals(item, (byte[]) o1, (byte[]) o2);
+                assertEquals((byte[]) o1, (byte[]) o2, item);
             } else if (char[].class.equals(key.getType())) {
-                assertEquals(item, (char[]) o1, (char[]) o2);
+                assertEquals((char[]) o1, (char[]) o2, item);
             } else if (key.isTypeOf(List.class)) {
-                assertEquals(item, (List) o1, (List) o2);
+                assertEquals((List) o1, (List) o2, item);
             } else {
-                assertEquals(item, o1, o2);
+                assertEquals(o1, o2, item);
             }
         }
     }

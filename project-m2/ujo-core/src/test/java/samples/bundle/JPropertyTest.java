@@ -16,7 +16,7 @@ import junit.framework.*;
  *
  * @author Pavel Ponec
  */
-public class JPropertyTest extends TestCase {
+public class JPropertyTest {
 
     public JPropertyTest(String testName) {
         super(testName);

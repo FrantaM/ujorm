@@ -15,7 +15,7 @@
  */
 package org.ujorm.extensions;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import org.ujorm.criterion.Operator;
 import java.util.Date;
 import java.io.Serializable;
@@ -26,7 +26,7 @@ import org.ujorm.implementation.quick.SmartUjo;
  * PropertyTest
  * @author Pavel Ponec
  */
-public class PropertyTest extends TestCase {
+public class PropertyTest {
 
     /** Number zero */
     private static final Integer NIL = 0;

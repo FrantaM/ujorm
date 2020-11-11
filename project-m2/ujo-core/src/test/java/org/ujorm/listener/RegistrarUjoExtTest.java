@@ -16,14 +16,14 @@
 
 package org.ujorm.listener;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import static org.ujorm.listener.Person.*;
 
 /**
  *
  * @author Pavel Ponec
  */
-public class RegistrarUjoExtTest extends TestCase {
+public class RegistrarUjoExtTest {
     
     public RegistrarUjoExtTest(String testName) {
         super(testName);
